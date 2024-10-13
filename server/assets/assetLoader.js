@@ -1,0 +1,5 @@
+/*
+    Asset Loader
+
+    This module is responsible for loading assets and keeping track of them.
+*/

@@ -1,11 +1,6 @@
-import { MongoClient, ServerApiVersion } from 'mongodb';
- 
-export const createConnection = (uri) => {
-    return new MongoClient(uri, {
-        serverApi: {
-            version: ServerApiVersion.v1,
-            strict: true,
-            deprecationErrors: true
-        }
-    })
-}
+import mongoose from 'mongoose';
+mongoose.set('strictQuery', true);
+
+export const createConnection = async (uri) => {
+    return mongoose.connect(uri);
+};

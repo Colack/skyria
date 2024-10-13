@@ -7,7 +7,7 @@
     NPM Packages
 */
 import express from 'express';
-import { MongoClient, ServerApiVersion } from 'mongodb';
+import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
@@ -17,7 +17,7 @@ import envalid from 'envalid';
     Local Imports
 */ 
 import { createConnection } from './database/connect.js';
-import { logColor } from './utility/logColor.js';
+import { logColor } from './util/logColor.js';
 
 /*
     Constants
@@ -48,20 +48,8 @@ app.use(cookieParser());
 /*
     Database Connection
 */
-const client = createConnection(uri);
-client.connect();
+const client = await createConnection(uri);
 
-/*
-    Server Start
-*/ 
 app.listen(port, () => {
     logColor(`Server is running on port ${port}`, 'green');
-});
-
-app.get('/health', (req, res) => {
-    res.status(200).send({ status: 'ok' });
-});
-
-app.get((err, req, res, next) => {
-    res.status(500).send({ error: err });
 });
