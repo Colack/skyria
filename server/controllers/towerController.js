@@ -2,4 +2,4 @@
     Tower Controller
 */
 
-import { Tower } from '../models/towerModel';
+import { Tower } from '../models/towerModel'

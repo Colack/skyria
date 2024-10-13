@@ -1,3 +1,4 @@
-# Gitignore for a npm project
 node_modules
 .env
+.replit
+.cache/

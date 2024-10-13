@@ -6,40 +6,40 @@
 /*
     NPM Packages
 */
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import cookieParser from 'cookie-parser';
-import envalid from 'envalid';
+import express from 'express'
+import mongoose from 'mongoose'
+import cors from 'cors'
+import dotenv from 'dotenv'
+import cookieParser from 'cookie-parser'
+import envalid from 'envalid'
 
 /*
     Local Imports
-*/ 
-import { createConnection } from './database/connect.js';
-import { logColor } from './util/logColor.js';
+*/
+import { createConnection } from './database/connect.js'
+import { logColor } from './util/logColor.js'
 
 /*
     Constants
 */
-const { str } = envalid;
-const app = express();
+const { str } = envalid
+const app = express()
 
-dotenv.config();
+dotenv.config()
 
 envalid.cleanEnv(process.env, {
-    MONGO_URI: str()
-});
+  MONGO_URI: str(),
+})
 
-const uri = process.env.MONGO_URI;
-const port = process.env.PORT || 3000;
+const uri = process.env.MONGO_URI
+const port = process.env.PORT || 3000
 
 /*
     Middleware
 */
-app.use(express.json());
-app.use(cors());
-app.use(cookieParser());
+app.use(express.json())
+app.use(cors())
+app.use(cookieParser())
 
 /*
     Routes
@@ -48,8 +48,8 @@ app.use(cookieParser());
 /*
     Database Connection
 */
-const client = await createConnection(uri);
+const client = await createConnection(uri)
 
 app.listen(port, () => {
-    logColor(`Server is running on port ${port}`, 'green');
-});
+  logColor(`Server is running on port ${port}`, 'green')
+})

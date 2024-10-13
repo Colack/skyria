@@ -4,7 +4,7 @@
   "description": "This is the backend module for Skyria Dungeons",
   "main": "server/index.js",
   "scripts": {
-    "prettier": "node ./scripts/prettier.js",
+    "prettier": "prettier --write .",
     "start": "node server/index.js"
   },
   "author": "Colack",

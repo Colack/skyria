@@ -1,23 +1,23 @@
 [
-    {
-        "name": "Jack's Claymore",
-        "description": "Developer item. A claymore that is said to have been wielded by a legendary hero.",
-        "rarity": "legendary",
-        "asset": "weapon/claymore/jack_claymore.png",
-        "type": "claymore"
-    },
-    {
-        "name": "Starter Sword",
-        "description": "A sword given to all new adventurers.",
-        "rarity": "common",
-        "asset": "weapon/sword/starter_sword.png",
-        "type": "sword"
-    },
-    {
-        "name": "Reinforced Sword",
-        "description": "A sword that has been reinforced with iron.",
-        "rarity": "common",
-        "asset": "weapon/sword/reinforced_sword.png",
-        "type": "sword"
-    }
+  {
+    "name": "Jack's Claymore",
+    "description": "Developer item. A claymore that is said to have been wielded by a legendary hero.",
+    "rarity": "legendary",
+    "asset": "weapon/claymore/jack_claymore.png",
+    "type": "claymore"
+  },
+  {
+    "name": "Starter Sword",
+    "description": "A sword given to all new adventurers.",
+    "rarity": "common",
+    "asset": "weapon/sword/starter_sword.png",
+    "type": "sword"
+  },
+  {
+    "name": "Reinforced Sword",
+    "description": "A sword that has been reinforced with iron.",
+    "rarity": "common",
+    "asset": "weapon/sword/reinforced_sword.png",
+    "type": "sword"
+  }
 ]
